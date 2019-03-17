@@ -1,0 +1,83 @@
+Backward Elimination Method 
+---------------------------
+
+Candidate Terms: 
+
+1 . Q1 
+2 . Q3 
+3 . Q4 
+4 . xYield_CASTHPI 
+5 . xYield_CPALTT01USQ657N 
+6 . xYield_GS10 
+7 . xYield_MSPNHSUS 
+8 . xYield_MVLOAS 
+9 . xYield_NYXRSA 
+10 . xYield_POPTHM 
+11 . xYield_SDXRSA 
+12 . xYield_TB3MS 
+13 . xYield_UMCSENT 
+14 . xYield_USSLIND 
+
+We are eliminating variables based on p value...
+
+Variables Removed: 
+
+✖ xYield_SDXRSA 
+✖ xYield_USSLIND 
+✖ xYield_UMCSENT 
+
+No more variables satisfy the condition of p value = 0.1
+
+
+Final Model Output 
+------------------
+
+                        Model Summary                         
+-------------------------------------------------------------
+R                       0.946       RMSE               0.007 
+R-Squared               0.895       Coef. Var          0.669 
+Adj. R-Squared          0.880       MSE                0.000 
+Pred R-Squared          0.829       MAE                0.005 
+-------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares        DF    Mean Square      F         Sig. 
+-------------------------------------------------------------------
+Regression      0.029        11          0.003    58.761    0.0000 
+Residual        0.003        76          0.000                     
+Total           0.033        87                                    
+-------------------------------------------------------------------
+
+											Parameter Estimates                                         
+	---------------------------------------------------------------------------------------------------
+					 model      Beta    Std. Error    Std. Beta      t        Sig      lower     upper 
+	---------------------------------------------------------------------------------------------------
+			   (Intercept)    -3.070         1.481                 -2.073    0.042    -6.019    -0.121 
+						Q1     0.008         0.002        0.180     3.652    0.000     0.004     0.013 
+						Q3    -0.018         0.002       -0.402    -8.175    0.000    -0.022    -0.014 
+						Q4    -0.014         0.002       -0.336    -6.715    0.000    -0.019    -0.010 
+			xYield_CASTHPI     0.296         0.037        0.444     7.905    0.000     0.221     0.370 
+	xYield_CPALTT01USQ657N     0.000         0.000        0.090     2.183    0.032     0.000     0.001 
+			   xYield_GS10     0.018         0.008        0.096     2.450    0.017     0.003     0.033 
+		   xYield_MSPNHSUS     0.079         0.031        0.111     2.581    0.012     0.018     0.140 
+			 xYield_MVLOAS     0.214         0.046        0.199     4.604    0.000     0.121     0.306 
+			 xYield_NYXRSA     0.227         0.063        0.204     3.574    0.001     0.100     0.353 
+			 xYield_POPTHM     3.226         1.482        0.097     2.177    0.033     0.275     6.177 
+			  xYield_TB3MS     0.008         0.001        0.228     5.547    0.000     0.005     0.011 
+	---------------------------------------------------------------------------------------------------
+
+
+                              Elimination Summary                                
+--------------------------------------------------------------------------------
+        Variable                        Adj.                                        
+Step       Removed        R-Square    R-Square     C(p)         AIC        RMSE     
+--------------------------------------------------------------------------------
+   1    xYield_SDXRSA       0.8987      0.8809    13.3832    -616.2091    0.0067    
+   2    xYield_USSLIND      0.8969      0.8804    12.6542    -616.6981    0.0067    
+   3    xYield_UMCSENT      0.8948      0.8796    12.2101    -616.8828    0.0067    
+--------------------------------------------------------------------------------
